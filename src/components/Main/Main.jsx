@@ -15,10 +15,10 @@ const Main = ({ coins , selectPlayer,handleChoosePlayer, availablePlayers, handl
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold">{btn === "available" ? `Available Players: (${availablePlayers} / ${players.length})` : `Selected Player(${selectPlayer}/11)`}</h1>
         <div className="flex gap-2">
-          <button onClick={() => handleBtn("available")} className={`border-2 p-2 border-slate-400  rounded-md ${btn === "available" ? 'hover:shadow-md shadow-md shadow-amber-400 border-yellow-400 ' : 'border-2 border-slate-400 p-2 rounded-md'}`}>Available</button>
+          <button onClick={() => handleBtn("available")} className={`border-2 p-2 border-slate-400  rounded-md ${btn === "available" ? 'hover:shadow-md shadow-md shadow-amber-400 border-yellow-400 hover:cursor-pointer' : 'border-2 border-slate-400 p-2 rounded-md hover:cursor-pointer'}`}>Available</button>
 
           {/* selected btn */}
-          <button onClick={() => handleBtn("selected")} className={`border-2 border-slate-400 p-2 rounded-md ${btn === "selected" ? 'hover:shadow-md shadow-md shadow-amber-400 border-yellow-400 ' : 'border-2 border-slate-400 p-2 rounded-md'}`}>Selected({selectPlayer})</button>
+          <button onClick={() => handleBtn("selected")} className={`border-2 border-slate-400 p-2 rounded-md ${btn === "selected" ? 'hover:shadow-md shadow-md shadow-amber-400 border-yellow-400 hover:cursor-pointer' : 'border-2 border-slate-400 p-2 rounded-md hover:cursor-pointer'}`}>Selected({selectPlayer})</button>
         </div>
       </div>
 
@@ -164,6 +164,8 @@ const Main = ({ coins , selectPlayer,handleChoosePlayer, availablePlayers, handl
 
                 </div>
               }
+
+              <button onClick={()=>handleBtn('available')} className="border-2 py-2 px-4 text-center rounded-lg my-4 flex mx-auto hover:cursor-pointer">Add More Player</button>
             </div>
           </div>
         )
