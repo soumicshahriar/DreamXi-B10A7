@@ -14,10 +14,10 @@ const Navbar = ({handleClaimFreeCredit, coins}) => {
     </div>
 
     <div className='flex items-center gap-4'>
-     <a href="#">Home</a>
+     {/* <a href="#">Home</a>
      <a href="#">Fixture</a>
      <a href="#">Teams</a>
-     <a href="#">Schedules</a>
+     <a href="#">Schedules</a> */}
      <button className='border-2 p-2 rounded-md flex items-center gap-1'><span>{coins}</span>Coin <BiSolidDollarCircle className='text-yellow-500 ' /></button>
     </div>
    </div>
